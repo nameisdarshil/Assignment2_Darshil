@@ -1,0 +1,21 @@
+<h2>Search by Product Name</h2>
+<form method="POST" action="/data/search/prdName">
+    <label for="productName">Enter Product Name:</label>
+    <input type="text" id="productName" name="productName" placeholder="e.g., Laptop, Phone, etc." required>
+    <button type="submit">Search</button>
+</form>
+
+{{#if products}}
+    <h3>Search Results</h3>
+    <ul>
+        {{#each products}}
+            <li>
+                <strong>Title:</strong> {{this.title}}<br>
+                <strong>Category:</strong> {{this.categoryName}}<br>
+                <strong>Price:</strong> {{this.price}}
+            </li>
+        {{/each}}
+    </ul>
+{{else}}
+    <p>No products found.</p>
+{{/if}}

@@ -1,0 +1,22 @@
+<table>
+    <thead>
+        <tr>
+            <th>ASIN</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Reviews</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each products}}
+        <tr class="{{#if (isZeroReviews reviews)}}different{{/if}}">
+            <td>{{this.asin}}</td>
+            <td>{{this.title}}</td>
+            <td>{{this.categoryName}}</td>
+            <td>{{this.price}}</td>
+            <td>{{formatReviews reviews}}</td> <!-- Applying custom helper -->
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

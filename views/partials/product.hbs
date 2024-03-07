@@ -1,0 +1,10 @@
+{{#if product}}
+    <h2>Product Details</h2>
+    <p>ASIN: {{product.asin}}</p>
+    <p>Title: {{product.title}}</p>
+    <p>Category: {{product.categoryName}}</p>
+    <p>Price: {{product.price}}</p>
+    <p>Reviews: {{product.reviews}}</p>
+{{else}}
+    <p>Product not found.</p>
+{{/if}}

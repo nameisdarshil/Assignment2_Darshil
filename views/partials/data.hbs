@@ -1,0 +1,10 @@
+<h2>JSON Data</h2>
+{{#if jsonData}}
+    <ul>
+        {{#each jsonData}}
+            <li>ASIN: {{this.asin}}, Title: {{this.title}}, Category: {{this.categoryName}}, Price: {{this.price}}</li>
+        {{/each}}
+    </ul>
+{{else}}
+    <p>No JSON data available.</p>
+{{/if}}
